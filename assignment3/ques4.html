@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #num1{
+            margin-left: 10px;
+        }
+        #num2{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        .btn{
+            margin: 10px;
+            margin-top: 20px;
+            background-color: initial;
+        }
+        h1{
+            color:brown;
+        }
+    </style>
+    <script>
+        function add() {
+            hide();
+            let n1=+document.getElementById("num1").value;
+            let n2=+document.getElementById("num2").value;
+            let ans=n1+n2;
+            document.getElementById("res").innerHTML="Res is :" + ans;
+            document.getElementById("res").style.visibility="visible";
+            document.getElementById("add").style.backgroundColor="green";
+            
+        }function sub() {
+            hide();
+            let n1=+document.getElementById("num1").value;
+            let n2=+document.getElementById("num2").value;
+            let ans=n1-n2;
+            document.getElementById("res").innerHTML="Res is :" + ans;
+            document.getElementById("res").style.visibility="visible";
+            document.getElementById("sub").style.backgroundColor="green";
+            
+        }function mul() {
+            hide();
+            let n1=+document.getElementById("num1").value;
+            let n2=+document.getElementById("num2").value;
+            let ans=n1*n2;
+            document.getElementById("res").innerHTML="Res is :" + ans;
+            document.getElementById("res").style.visibility="visible";
+            document.getElementById("mul").style.backgroundColor="green";
+            
+        }function div() {
+            hide();
+            let n1=+document.getElementById("num1").value;
+            let n2=+document.getElementById("num2").value;
+            let ans=n1/n2;
+            document.getElementById("res").innerHTML="Res is :" + ans;
+            document.getElementById("res").style.visibility="visible";
+            document.getElementById("div").style.backgroundColor="green";
+            
+        }
+        function hide() {
+            document.getElementById("res").style.visibility="hidden";  
+            document.getElementById("add").style.backgroundColor="initial";
+            document.getElementById("sub").style.backgroundColor="initial";
+            document.getElementById("mul").style.backgroundColor="initial";
+            document.getElementById("div").style.backgroundColor="initial";
+        }
+    </script>
+</head>
+<body>
+    <h1>Arithmetic Calculator</h1>
+    <label for="n1" id="n1">Num1</label><input onfocus="hide()" type="text" id="num1">
+    <br>
+    <label for="n1" id="n2">Num2</label><input onfocus="hide()" type="text" id="num2">
+    <br>
+    <button id="add" class="btn" onclick="add()">+</button>
+    <button id="sub" class="btn" onclick="sub()">-</button>
+    <button id="mul" class="btn" onclick="mul()">*</button>
+    <button id="div" class="btn" onclick="div()">/</button>
+    <br>
+    <label for="res" id="res" style="visibility: hidden;">res</label>
+</body>
+</html>

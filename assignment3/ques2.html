@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #String1{
+        margin-left: 30px;
+    }
+    #String2{
+        margin:5px;
+        margin-left: 30px;
+    }
+    #res{
+        margin:5px;
+        margin-left: 30px;
+        visibility: hidden;
+    }
+    #btn{
+        margin-left: 20px;
+        margin-top: 10px;;
+    }
+</style>
+<script>
+    function calculateGCD(a,b){
+        console.log(typeof(a));
+        if(b%a==0) return a;
+        return calculateGCD(b%a,a);
+    }
+    function check(){
+    let s1=document.getElementById("String1").value;
+    let s2=document.getElementById("String2").value;
+    let ans=s2.includes(s1);
+    let text="";
+    if(ans==true){
+        text="string1 is substring of string2";
+        document.getElementById("res").style.color="green";
+    }
+    else {
+        text="string1 is not a substring of string2";
+        document.getElementById("res").style.color="red";
+    }
+        document.getElementById("res").innerHTML=text;
+        document.getElementById("res").style.visibility="visible";
+
+    }
+</script>
+<body>
+    <h1>Enter two Strings</h1>
+    <label for="String1"><b>String1 :</b></label><input id="String1" type="text">
+    <br>
+    <label for="String2"><b>String2 :</b></label><input id="String2" type="text">
+    <br>
+    <button id="btn" onclick="check()"><b>CHECK</b></button>
+    <br>
+    <label id="res" for="res"></label>
+</body>
+</html>

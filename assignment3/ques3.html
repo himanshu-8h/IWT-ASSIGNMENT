@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onmouse(){
+            document.getElementById('im1').style.visibility="hidden";
+            document.getElementById('im1').style.width="0px";
+            document.getElementById('im1').style.height="0px";
+            document.getElementById('im2').style.visibility="visible";
+            document.getElementById('im2').style.width="400px";
+            document.getElementById('im2').style.height="400px";
+            
+        }
+        function offmouse(){
+            document.getElementById('im2').style.visibility="hidden";
+            document.getElementById('im2').style.width="0px";
+            document.getElementById('im2').style.height="0px";
+            document.getElementById('im1').style.visibility="visible";
+            document.getElementById('im1').style.width="400px";
+            document.getElementById('im1').style.height="400px";
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Mouseover</h1>
+    <img id="im1" onmouseover="onmouse()" src="/img/html5-386614_640.jpg" alt="image" width="400px" height="400px">
+    <img id="im2" onmouseout="offmouse()" style="visibility: hidden" src="/img/error-1349562_640.png" alt="image2" >
+</body>
+</html>
